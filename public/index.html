@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket cliente</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+<body class="container">
+    <h1 class="mt-2">Sockete cliente</h1>
+    <hr>
+
+    <p>
+        Servidor Estatus:
+        <span id="lblOnLine" class="text-success">OnLine</span>
+        <span id="lblOffLine" class="test-danger">OffLine</span>
+    </p>
+
+    <div class="row">
+        <div class="col">
+            <input type="text" id="txtMensaje" class="form-control">
+        </div>
+        <div class="col">
+            <button id="btnEnviar" class="btn btn-primary">
+                Enviar
+            </button>
+        </div>
+    </div>
+    
+
+    <!--Como estamos en el mismo lugar, no hace falta poner toda la ruta, si nuestro front estuviera en otro lugar
+        tendríamos que usar socket.io client y poner toda la ura "http://... (donde estuviera mi socket backend" 
+        Este import siempre va antes del socket-client-->
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./js/socket-client.js"></script>
+</body>
+</html>
